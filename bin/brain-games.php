@@ -1,3 +1,3 @@
 <?php
-echo "php bin/brain-games.php\nWelcome to the Brain Games!";
 
+print_r("Welcome to the Brain Games!\n");
