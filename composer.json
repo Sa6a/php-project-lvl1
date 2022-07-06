@@ -1,4 +1,6 @@
 {
     "name": "hexlet/code",
+    "description": "hexlet learn-package",
+    "license": "MIT",
     "require": {}
 }
