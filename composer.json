@@ -1,9 +1,16 @@
 {
     "name": "hexlet/code",
+    "autoload": {
+        "files": [
+            "src/Cli.php"
+        ]
+    },
     "bin": [
         "bin/brain-games"
       ],      
     "description": "hexlet learn-package",
     "license": "MIT",
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.13"
+    }
 }
