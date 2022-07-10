@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Php\Project\Lvl1\Games\Prime;
+namespace BrainGames\Cli\Games\Prime;
 
-use function Php\Project\Lvl1\Engine\engine;
+use function BrainGames\Cli\Engine\engine;
 
 function playPrime(): void
 {

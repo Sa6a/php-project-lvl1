@@ -1,8 +1,8 @@
 <?php
 
-namespace Php\Project\Lvl1\Games\Even;
+namespace BrainGames\Cli\Games\Even;
 
-use function Php\Project\Lvl1\Engine\engine;
+use function BrainGames\Cli\Engine\engine;
 
 function playEven(): void
 {

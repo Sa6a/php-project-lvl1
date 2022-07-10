@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Php\Project\Lvl1\Games\Progression;
+namespace BrainGames\Cli\Games\Progression;
 
-use function Php\Project\Lvl1\Engine\engine;
+use function BrainGames\Cli\Engine\engine;
 
 function playProgression(): void
 {

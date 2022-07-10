@@ -1,8 +1,8 @@
 <?php
 
-namespace Php\Project\Lvl1\Games\Calc;
+namespace BrainGames\Cli\Games\Calc;
 
-use function Php\Project\Lvl1\Engine\engine;
+use function BrainGames\Cli\Engine\engine;
 
 function playCalc(): void
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Php\Project\Lvl1\Engine;
+namespace BrainGames\Cli\Engine;
 
 use function cli\line;
 use function cli\prompt;
@@ -25,7 +25,7 @@ function engine(string $gameRules, callable $getQuestion, callable $getCorrectAn
         } else {
             line("'{$playersAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
             line("Let's try again, {$name}!");
-            break;
+            return;
         }
     }
 

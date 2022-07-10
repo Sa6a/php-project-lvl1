@@ -1,8 +1,8 @@
 <?php
 
-namespace Php\Project\Lvl1\Games\Gcd;
+namespace BrainGames\Cli\Games\Gcd;
 
-use function Php\Project\Lvl1\Engine\engine;
+use function BrainGames\Cli\Engine\engine;
 
 function playGcd(): void
 {
