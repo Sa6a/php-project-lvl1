@@ -25,12 +25,12 @@ function playProgression(): void
 
     $getCorrectAnswer = function (string $progression): string {
         $progressionArr = explode(' ', $progression);
-        $iHidElem = array_search('..', $progressionArr);
+        $iHidElem = array_search('..', $progressionArr, true);
         if ($iHidElem > 1) {
             $stepProgression = (int) $progressionArr[$iHidElem - 1] - (int) $progressionArr[$iHidElem - 2];
             return (string) ((int) $progressionArr[$iHidElem - 1] + $stepProgression);
         } else {
-            $stepProgression = (int) $progressionArr[$iHidElem + 2] -  (int) $progressionArr[$iHidElem + 1];
+            $stepProgression = (int) $progressionArr[$iHidElem + 2] - (int) $progressionArr[$iHidElem + 1];
             return (string) ((int) $progressionArr[$iHidElem + 1] - $stepProgression);
         }
     };
