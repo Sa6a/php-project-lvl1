@@ -27,14 +27,14 @@ function playCalc(): void
     $getCorrectAnswer = function (string $expression): string {
         $expressionToList = explode(' ', $expression);
         $operation = $expressionToList[1];
-        $num1 = $expressionToList[0];
-        $num2 = $expressionToList[2];
+        $num1 = (int) $expressionToList[0];
+        $num2 = (int) $expressionToList[2];
         if ($operation === '+') {
-            return (string) $num1 + $num2;
+            return (string) ($num1 + $num2);
         } elseif ($operation === '-') {
-            return (string) $num1 - $num2;
+            return (string) ($num1 - $num2);
         } else {
-            return (string) $num1 * $num2;
+            return (string) ($num1 * $num2);
         }
     };
 

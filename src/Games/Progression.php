@@ -27,11 +27,11 @@ function playProgression(): void
         $progressionArr = explode(' ', $progression);
         $iHidElem = array_search('..', $progressionArr);
         if ($iHidElem > 1) {
-            $stepProgression = $progressionArr[$iHidElem - 1] - $progressionArr[$iHidElem - 2];
-            return (string) ($progressionArr[$iHidElem - 1] + $stepProgression);
+            $stepProgression = (int) $progressionArr[$iHidElem - 1] - (int) $progressionArr[$iHidElem - 2];
+            return (string) ((int) $progressionArr[$iHidElem - 1] + $stepProgression);
         } else {
-            $stepProgression = $progressionArr[$iHidElem + 2] - $progressionArr[$iHidElem + 1];
-            return (string) ($progressionArr[$iHidElem + 1] - $stepProgression);
+            $stepProgression = (int) $progressionArr[$iHidElem + 2] -  (int) $progressionArr[$iHidElem + 1];
+            return (string) ((int) $progressionArr[$iHidElem + 1] - $stepProgression);
         }
     };
 
