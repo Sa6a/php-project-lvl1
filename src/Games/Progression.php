@@ -30,8 +30,8 @@ function playProgression(): void
             $stepProgression = (int) $progressionArr[$iHidElem - 1] - (int) $progressionArr[$iHidElem - 2];
             return (string) ((int) $progressionArr[$iHidElem - 1] + $stepProgression);
         } else {
-            $shiftedValueTwo = (int) $progressionArr[$iHidElem + 2];
-            $shiftedValueOne = (int) $progressionArr[$iHidElem + 1];
+            $shiftedValueTwo = (int) $progressionArr[(int) $iHidElem + 2];
+            $shiftedValueOne = (int) $progressionArr[(int) $iHidElem + 1];
             $stepProgression = $shiftedValueTwo - $shiftedValueOne;
             return (string) ($shiftedValueTwo - $stepProgression);
         }
