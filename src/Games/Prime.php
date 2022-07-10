@@ -16,8 +16,12 @@ function playPrime(): void
     };
 
     $getCorrectAnswer = function (int $number): string {
-
-        return gmp_prob_prime($number) === 2 ? 'yes' : 'no';
+        for ($i = 2; $i <= sqrt($number); $i += 1) {
+            if ($number % $i == 0) {
+                return 'no';
+            }
+        }
+        return 'yes';
     };
 
     engine($gameRules, $getQuestion, $getCorrectAnswer);

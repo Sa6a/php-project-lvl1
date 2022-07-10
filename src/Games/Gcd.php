@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace BrainGames\Games\Gcd;
 
 use function BrainGames\Engine\engine;
+use function BrainGames\Misc\Gcd\findGcd;
 
 function playGcd(): void
 {
@@ -20,15 +21,7 @@ function playGcd(): void
         $expressionToList = explode(' ', $expression);
         $num1 = (int) $expressionToList[0];
         $num2 = (int) $expressionToList[1];
-        while (true) {
-            $remains = $num1 % $num2;
-            if ($remains === 0) {
-                return (string) $num2;
-            } else {
-                $num1 = $num2;
-                $num2 = $remains;
-            }
-        }
+        return (string) findGcd($num1, $num2);
     };
 
     engine($gameRules, $getQuestion, $getCorrectAnswer);
