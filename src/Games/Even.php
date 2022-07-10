@@ -1,8 +1,10 @@
 <?php
 
-namespace BrainGames\Cli\Games\Even;
+declare(strict_types=1);
 
-use function BrainGames\Cli\Engine\engine;
+namespace BrainGames\Games\Even;
+
+use function BrainGames\Engine\engine;
 
 function playEven(): void
 {

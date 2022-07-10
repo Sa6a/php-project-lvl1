@@ -1,16 +1,18 @@
 <?php
 
-namespace BrainGames\Cli\Games\Gcd;
+declare(strict_types=1);
 
-use function BrainGames\Cli\Engine\engine;
+namespace BrainGames\Games\Gcd;
+
+use function BrainGames\Engine\engine;
 
 function playGcd(): void
 {
     $gameRules = 'Find the greatest common divisor of given numbers.';
 
     $getQuestion = function (): string {
-        $num1 = rand(0, 99);
-        $num2 = rand(0, 99);
+        $num1 = rand(1, 99);
+        $num2 = rand(1, 99);
         return "{$num1} {$num2}";
     };
 
@@ -18,7 +20,15 @@ function playGcd(): void
         $expressionToList = explode(' ', $expression);
         $num1 = (int) $expressionToList[0];
         $num2 = (int) $expressionToList[1];
-        return (string) gmp_gcd($num1, $num2);
+        while (true) {
+            $remains = $num1 % $num2;
+            if ($remains === 0) {
+                return (string) $num2;
+            } else {
+                $num1 = $num2;
+                $num2 = $remains;
+            }
+        }
     };
 
     engine($gameRules, $getQuestion, $getCorrectAnswer);

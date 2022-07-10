@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BrainGames\Cli\Games\Progression;
+namespace BrainGames\Games\Progression;
 
-use function BrainGames\Cli\Engine\engine;
+use function BrainGames\Engine\engine;
 
 function playProgression(): void
 {

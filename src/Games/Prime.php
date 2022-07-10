@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BrainGames\Cli\Games\Prime;
+namespace BrainGames\Games\Prime;
 
-use function BrainGames\Cli\Engine\engine;
+use function BrainGames\Engine\engine;
 
 function playPrime(): void
 {

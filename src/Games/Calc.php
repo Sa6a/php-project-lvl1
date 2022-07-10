@@ -1,8 +1,10 @@
 <?php
 
-namespace BrainGames\Cli\Games\Calc;
+declare(strict_types=1);
 
-use function BrainGames\Cli\Engine\engine;
+namespace BrainGames\Games\Calc;
+
+use function BrainGames\Engine\engine;
 
 function playCalc(): void
 {
